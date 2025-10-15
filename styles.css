@@ -1,5 +1,4 @@
-
-header{
+header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -8,27 +7,32 @@ header{
     padding-block: 10px;
     background: transparent;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
 }
 
-header .icon{
+header .icon {
     align-items: center;
     justify-content: center;
-    gap:10px;
+    gap: 10px;
 }
 
-header a{
+header a {
     font-size: 25px;
     text-decoration: none;
     color: #2E0F13;
+    transition: all 0.3s ease;
 }
 
-.container-fluid{
+header .subscribe_link a:hover {
+    color: #A9553D;
+}
+
+.container-fluid {
     color: #2E0F13;
 }
 
-.row.big .col-md{
+.row.big .col-md {
     height: 500px;
     display: flex;
     align-items: center;
@@ -38,98 +42,116 @@ header a{
     padding: 0 !important;
 }
 
-.row.small .col-md{
+.row.small .col-md {
     padding-top: 30px;
     display: flex;
-    flex-direction: column;           
-    align-items: flex-start;    
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-#col1{
+#col1 {
     background-color: #ffffff;
 }
 
-#col1 h1{
+#col1 h1 {
     font-size: 54px;
 }
 
-#col2{
-    justify-content: space-around; 
-    align-items: flex-start;      
+#col2 {
+    justify-content: space-around;
+    align-items: flex-start;
     background-color: #A9553D;
     color: #ffffff;
 }
 
-#col2 h1, #col2 .lower_text{
+#col2 h1,
+#col2 .lower_text,
+#col2 a,
+#col5 p,
+#col5 form,
+#col8 p {
     padding-left: 100px;
 }
 
-#col2 p{
+#col2 p {
     font-size: 17px;
 }
 
-#col2 a{
+#col2 a {
     text-decoration: none;
     color: #ffffff;
     font-size: 17px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
 }
 
-#col3{
+#col2 a:hover {
+    background-color: #ffffff;
+    color: #2E0F13;
+}
+
+#col3 {
     justify-content: space-evenly;
 }
 
-#col3 img{
+#col3 img {
     width: 320px;
     height: 300px;
     object-fit: cover;
     margin-top: 80px;
 }
 
-#col3 h1{
+#col3 h1 {
     font-size: 37px;
 }
 
-#col4 img,#col6 img{
+#col4 img,
+#col6 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#col5{
-    background-color: #DDBEEA; 
-    align-items: flex-start;  
+#col5 {
+    background-color: #DDBEEA;
+    align-items: flex-start;
     justify-content: flex-start;
 }
 
-#col5 p{
+#col5 p {
     padding-top: 100px;
     margin-bottom: 70px;
 }
 
-#col5 form,form .field1{
+#col5 form,
+form .field1 {
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
 }
 
-.field1 label{
+form {
+    height: 100%;
+}
+
+.field1 label {
     font-weight: 500;
 }
 
-.field1 input{
+.field1 input {
     border: none;
     border-bottom: 1px solid black;
     background: none;
     outline: none;
 }
 
-.field2{
+.field2 {
     display: flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
-.field2 button{
+.field2 button {
     background-color: #2E0F13;
     color: #ffffff;
     border: none;
@@ -137,42 +159,60 @@ header a{
     padding: 5px 20px;
 }
 
-.field2 label{
+.field2 label {
     width: 150px;
 }
 
-#col5 p,form {
+#col7 h1 {
+    font-size: 37px;
     padding-left: 100px;
 }
 
-#col7 h1{
-    font-size: 37px;
-    padding-left:100px;
-}
-
-#col8 p{
-    padding-left: 80px;
-}
-
-#col9{
+#col9 {
     padding-bottom: 30px;
-    gap:15px;
+    gap: 15px;
 }
 
-#col9 .socials{
+#col9 .socials {
     margin-bottom: 10px;
 }
 
-.socials span{
+.socials span {
     width: 15px;
     height: 15px;
     background-color: black;
     border-radius: 50%;
-    color:#ffffff;
+    color: #ffffff;
     text-align: center;
     padding: 3px;
     margin-right: 40px;
     font-size: 12px;
 }
 
+@media(max-width: 1025px) {
+    #col2 h1,
+    #col2 .lower_text,
+    #col5 p,
+    #col5 form,
+    #col8 p {
+        padding-left: 40px;
+    }
+}
 
+@media(max-width: 425px) {
+    #col2 h1,
+    #col2 .lower_text,
+    #col5 p,
+    #col5 form,
+    #col8 p {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width:760px) {
+   #col7 h1,
+   #col9 .socials,
+   #col9 p{
+    padding-left: 40px;
+   }
+}
